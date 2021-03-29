@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  node:
+    build: .
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - stack
+  redis:
+    image: redis:6
+    restart: always
+    networks:
+      - stack
+networks:
+  stack:
+    driver: bridge
