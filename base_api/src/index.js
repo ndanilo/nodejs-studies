@@ -6,5 +6,5 @@ const host = process.env.host || '0.0.0.0';
 
 app.listen(port, host);
 
-console.log(`Hello: ${process.env.hello}`);
+console.log(`Server Message: ${process.env.hello}`);
 console.log(`running on: http://${host}:${port}`);
